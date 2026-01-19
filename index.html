@@ -11,14 +11,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
+    const header = document.querySelector('header');
+    let lastScroll = 0;
+    const isMobile = window.innerWidth <= 768;
     
+    // Menu hamburger
     if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
-            this.classList.toggle('active');
+        hamburger.addEventListener('click', function(e) {
+            e.preventDefault();
+            hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
         
-        // Ferme le menu quand on clique sur un lien
         const navLinks = navMenu.querySelectorAll('a');
         navLinks.forEach(function(link) {
             link.addEventListener('click', function() {
@@ -27,13 +31,54 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    
+    // MOBILE : Header qui se cache/affiche au scroll
+    if (isMobile) {
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('scroll-up');
+                header.classList.remove('scroll-down');
+            } else if (currentScroll > lastScroll && currentScroll > 100) {
+                header.classList.remove('scroll-up');
+                header.classList.add('scroll-down');
+            } else if (currentScroll < lastScroll) {
+                header.classList.remove('scroll-down');
+                header.classList.add('scroll-up');
+            }
+            
+            lastScroll = currentScroll;
+        });
+    }
+    
+    // PC : Header apparaît uniquement au survol de la souris en haut
+    if (!isMobile) {
+        // Cache le header par défaut après avoir scrollé
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+            if (currentScroll > 50) {
+                header.classList.add('scroll-down');
+            } else {
+                header.classList.remove('scroll-down');
+            }
+        });
+        
+        // Header se réaffiche quand la souris passe en haut
+        document.addEventListener('mousemove', function(e) {
+            if (e.clientY < 100) {
+                header.classList.remove('scroll-down');
+                header.classList.add('scroll-up');
+            } else if (e.clientY > 150 && window.pageYOffset > 50) {
+                // Souris pas en haut ET on a scrollé = on cache
+                header.classList.remove('scroll-up');
+                header.classList.add('scroll-down');
+            }
+        });
+    }
 });
 </script>
-
-</body>
-</html>
-
-
+    
 </body>
 </html>
 
