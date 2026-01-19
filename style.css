@@ -326,26 +326,86 @@ footer {
     }
 }
 
-/* MENU MOBILE AMÉLIORÉ */
+/* ================================================================
+   MENU HAMBURGER (MOBILE UNIQUEMENT)
+   ================================================================ */
+
+/* Cache le bouton hamburger sur PC */
+.hamburger {
+    display: none;
+}
+
+/* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
-    nav ul {
-        display: flex !important;
+    /* Affiche le bouton hamburger sur mobile */
+    .hamburger {
+        display: flex;
         flex-direction: column;
-        gap: 10px;
-        padding: 10px 0;
+        gap: 5px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1000;
+    }
+    
+    .hamburger span {
+        width: 25px;
+        height: 3px;
+        background-color: #e0e0e0;
+        border-radius: 3px;
+        transition: all 0.3s;
+    }
+    
+    /* Animation du hamburger en X quand ouvert */
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(7px, 7px);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    
+    /* Cache le menu par défaut sur mobile */
+    nav {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 70%;
+        height: calc(100vh - 60px);
+        background-color: #111827;
+        transition: right 0.3s ease;
+        border-left: 1px solid #333;
+        z-index: 999;
+    }
+    
+    /* Affiche le menu quand actif */
+    nav.active {
+        right: 0;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding: 20px;
+        gap: 0;
+    }
+    
+    nav ul li {
+        width: 100%;
+        border-bottom: 1px solid #222;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 15px 10px;
+        font-size: 16px;
     }
     
     .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .logo {
-        margin-bottom: 10px;
-    }
-    
-    nav a {
-        font-size: 14px;
-        padding: 5px 0;
+        justify-content: space-between;
     }
 }
