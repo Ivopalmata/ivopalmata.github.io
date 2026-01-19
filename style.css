@@ -333,6 +333,20 @@ footer {
 /* Cache le bouton hamburger sur PC */
 .hamburger {
     display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    transition: all 0.3s;
 }
 
 /* RESPONSIVE MOBILE */
@@ -340,21 +354,7 @@ footer {
     /* Affiche le bouton hamburger sur mobile */
     .hamburger {
         display: flex;
-        flex-direction: column;
-        gap: 5px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        padding: 10px;
-        z-index: 1000;
-    }
-    
-    .hamburger span {
-        width: 25px;
-        height: 3px;
-        background-color: #e0e0e0;
-        border-radius: 3px;
-        transition: all 0.3s;
+        z-index: 1001;
     }
     
     /* Animation du hamburger en X quand ouvert */
@@ -370,17 +370,24 @@ footer {
         transform: rotate(-45deg) translate(7px, -7px);
     }
     
+    /* Navigation container */
+    .nav-container {
+        justify-content: space-between;
+    }
+    
     /* Cache le menu par défaut sur mobile */
     nav {
         position: fixed;
         top: 60px;
         right: -100%;
         width: 70%;
+        max-width: 300px;
         height: calc(100vh - 60px);
         background-color: #111827;
         transition: right 0.3s ease;
         border-left: 1px solid #333;
-        z-index: 999;
+        z-index: 1000;
+        overflow-y: auto;
     }
     
     /* Affiche le menu quand actif */
@@ -389,8 +396,9 @@ footer {
     }
     
     nav ul {
+        display: flex;
         flex-direction: column;
-        padding: 20px;
+        padding: 20px 0;
         gap: 0;
     }
     
@@ -401,11 +409,8 @@ footer {
     
     nav ul li a {
         display: block;
-        padding: 15px 10px;
+        padding: 15px 20px;
         font-size: 16px;
     }
-    
-    .nav-container {
-        justify-content: space-between;
-    }
 }
+
