@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('header');
     let lastScroll = 0;
     
+    // Détection si c'est un appareil mobile
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+    
     // Menu hamburger
     if (hamburger && navMenu) {
         hamburger.addEventListener('click', function(e) {
@@ -31,32 +34,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // SCROLL pour TOUT LE MONDE (mobile + PC)
-    window.addEventListener('scroll', function() {
-        const currentScroll = window.pageYOffset;
+    if (isMobile) {
+        // MOBILE : Scroll up/down pour montrer/cacher
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 10) {
+                header.style.transform = 'translateY(0)';
+            } else if (currentScroll > lastScroll && currentScroll > 50) {
+                header.style.transform = 'translateY(-100%)';
+            } else if (currentScroll < lastScroll) {
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+    } else {
+        // PC : Cache après scroll, réapparaît UNIQUEMENT avec la souris
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+        });
         
-        // En haut de page = header visible
-        if (currentScroll <= 10) {
-            header.style.transform = 'translateY(0)';
-        }
-        // Descend = header caché
-        else if (currentScroll > lastScroll && currentScroll > 50) {
-            header.style.transform = 'translateY(-100%)';
-        }
-        // Remonte = header visible
-        else if (currentScroll < lastScroll) {
-            header.style.transform = 'translateY(0)';
-        }
-        
-        lastScroll = currentScroll;
-    });
-    
-    // PC : Souris en haut = header visible
-    document.addEventListener('mousemove', function(e) {
-        if (e.clientY < 100) {
-            header.style.transform = 'translateY(0)';
-        }
-    });
+        // Souris en haut = header visible
+        document.addEventListener('mousemove', function(e) {
+            const currentScroll = window.pageYOffset;
+            
+            if (e.clientY < 100 && currentScroll > 50) {
+                header.style.transform = 'translateY(0)';
+            } else if (e.clientY > 150 && currentScroll > 50) {
+                header.style.transform = 'translateY(-100%)';
+            }
+        });
+    }
 });
 </script>
     
