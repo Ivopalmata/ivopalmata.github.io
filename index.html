@@ -6,19 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
+    <script>
+// Script pour le menu hamburger
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Ferme le menu quand on clique sur un lien
+const navLinks = document.querySelectorAll('nav ul li a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+});
+</script>
+
+</body>
+</html>
+
 <body>
 
 <header>
     <div class="nav-container">
-        <div class="logo">Portfolio BTS SIO SISR</div>
-        <nav>
+        <div class="logo">🖥️ Portfolio BTS SIO SISR</div>
+        
+        <!-- Bouton hamburger (visible uniquement sur mobile) -->
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        
+        <nav id="nav-menu">
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#apropos">À propos</a></li>
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#formations">Formations</a></li>
                 <li><a href="#experiences">Expériences</a></li>
-                <li><a href="#projets">Projets (TP)</a></li>
+                <li><a href="#projets">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
