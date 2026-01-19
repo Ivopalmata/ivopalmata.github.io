@@ -326,9 +326,7 @@ footer {
     }
 }
 
-/* ================================================================
-   MENU HAMBURGER (MOBILE UNIQUEMENT)
-   ================================================================ */
+/* MENU HAMBURGER (MOBILE UNIQUEMENT) */
 
 /* Cache le bouton hamburger sur PC */
 .hamburger {
@@ -351,13 +349,11 @@ footer {
 
 /* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
-    /* Affiche le bouton hamburger sur mobile */
     .hamburger {
         display: flex;
         z-index: 1001;
     }
     
-    /* Animation du hamburger en X quand ouvert */
     .hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(7px, 7px);
     }
@@ -370,12 +366,10 @@ footer {
         transform: rotate(-45deg) translate(7px, -7px);
     }
     
-    /* Navigation container */
     .nav-container {
         justify-content: space-between;
     }
     
-    /* Cache le menu par défaut sur mobile */
     nav {
         position: fixed;
         top: 60px;
@@ -390,16 +384,16 @@ footer {
         overflow-y: auto;
     }
     
-    /* Affiche le menu quand actif */
     nav.active {
         right: 0;
     }
     
     nav ul {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         padding: 20px 0;
         gap: 0;
+        list-style: none;
     }
     
     nav ul li {
@@ -411,6 +405,14 @@ footer {
         display: block;
         padding: 15px 20px;
         font-size: 16px;
+        color: #e0e0e0;
+        text-decoration: none;
+    }
+    
+    nav ul li a:hover {
+        color: #2563eb;
+        background-color: #1a1a2e;
     }
 }
+
 
