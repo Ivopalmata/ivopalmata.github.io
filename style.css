@@ -29,11 +29,11 @@ body {
     pointer-events: none;
 }
 
-/* Header et navigation */
+/* Header et navigation - OPTIMISÉ (flou réduit) */
 header {
-    background: rgba(10, 14, 39, 0.8) !important;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    background: rgba(10, 14, 39, 0.95) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 15px 0;
     position: fixed;
@@ -44,6 +44,7 @@ header {
     z-index: 100;
     transition: transform 0.3s ease-in-out;
     transform: translateY(0);
+    will-change: transform;
 }
 
 .nav-container {
@@ -98,7 +99,7 @@ nav a:hover {
     transition: all 0.3s;
 }
 
-/* Contenu principal */
+/* Contenu principal - OPTIMISÉ (flou enlevé) */
 .container {
     max-width: 1100px;
     margin: 0 auto;
@@ -106,9 +107,7 @@ nav a:hover {
 }
 
 section {
-    background: rgba(10, 14, 39, 0.6);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    background: rgba(10, 14, 39, 0.9);
     padding: 50px 0;
     border-bottom: 1px solid #222;
 }
@@ -239,7 +238,7 @@ p {
     50% { border-color: #3b82f6; }
 }
 
-/* Cartes */
+/* Cartes - OPTIMISÉ (flou enlevé) */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -248,14 +247,13 @@ p {
 }
 
 .card {
-    background: rgba(17, 24, 39, 0.7);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(17, 24, 39, 0.95);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     padding: 20px;
     border-radius: 12px;
-    transition: border-color 0.3s;
+    transition: border-color 0.3s, transform 0.3s;
+    will-change: transform;
 }
 
 .card:hover {
@@ -295,14 +293,14 @@ p {
     border: 1px solid #333;
 }
 
-/* Cartes animées au hover */
+/* Cartes animées au hover - OPTIMISÉ */
 #projets .card,
 #experiences .timeline-content,
 #formations .card,
 #apropos .card {
     position: relative;
     overflow: hidden;
-    transition: all 0.4s ease;
+    transition: all 0.3s ease;
 }
 
 #projets .card::before,
@@ -315,8 +313,8 @@ p {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.2), transparent);
-    transition: left 0.5s ease;
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.15), transparent);
+    transition: left 0.4s ease;
 }
 
 #projets .card:hover::before,
@@ -330,9 +328,9 @@ p {
 #experiences .timeline-content:hover,
 #formations .card:hover,
 #apropos .card:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-8px);
     border-color: #2563eb;
-    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
 }
 
 #projets .card h3,
@@ -358,17 +356,17 @@ p {
 #projets .card:hover .tags,
 #experiences .timeline-content:hover .tags,
 #formations .card:hover .tags {
-    transform: translateX(5px);
+    transform: translateX(3px);
 }
 
 #projets .card img,
 #formations .card img {
-    transition: transform 0.5s ease;
+    transition: transform 0.4s ease;
 }
 
 #projets .card:hover img,
 #formations .card:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Tableau compétences */
@@ -400,7 +398,7 @@ td {
     font-weight: bold;
 }
 
-/* Barres de compétences animées */
+/* Barres de compétences */
 .skills-container {
     max-width: 800px;
     margin: 30px auto 0;
@@ -442,8 +440,6 @@ td {
     height: 100%;
     background: linear-gradient(90deg, #2563eb, #3b82f6);
     border-radius: 10px;
-    width: 0;
-    transition: width 1.5s ease;
     box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
 }
 
