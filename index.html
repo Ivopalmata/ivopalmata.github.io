@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio - Ivaylo DOBREV</title>
+    <title>Portfolio - Ivaylo DOBREV | BTS SIO SISR</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio d'Ivaylo DOBREV, étudiant en BTS SIO SISR. Spécialisé en administration systèmes, réseaux et maintenance informatique.">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,8 +15,8 @@
     <div class="progress-bar" id="progressBar"></div>
 
     <!-- Bouton retour en haut -->
-    <button class="back-to-top" id="backToTop">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28px" height="28px">
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
             <path d="M12 4l-8 8h5v8h6v-8h5z" />
         </svg>
     </button>
@@ -23,8 +25,7 @@
         <div class="nav-container">
             <div class="logo">Portfolio BTS SIO SISR</div>
 
-            <!-- Bouton hamburger (visible uniquement sur mobile) -->
-            <button class="hamburger" id="hamburger">
+            <button class="hamburger" id="hamburger" aria-label="Menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -115,7 +116,7 @@
                     </p>
                 </div>
             </div>
-            <div class="card" style="margin-top: 20px;">
+            <div class="card" style="margin-top:20px">
                 <h3>🎯 Objectifs professionnels</h3>
                 <p>
                     Mon objectif est de poursuivre après le BTS SIO avec une Licence Professionnelle en alternance
@@ -126,142 +127,130 @@
             </div>
         </section>
 
-        <!-- SECTION COMPÉTENCES -->
+        <!-- SECTION COMPÉTENCES OPTIMISÉE -->
         <section id="competences">
             <h2>🛠️ Compétences techniques</h2>
-            <p>Mes principales compétences en infrastructure, systèmes et réseaux acquises en formation et stages.</p>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Domaine</th>
-                        <th>Technologies / Outils</th>
-                        <th>Niveau</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Support & Maintenance</strong></td>
-                        <td>Assistance technique, Support utilisateurs, Gestion des utilisateurs, Secure Now</td>
-                        <td><span class="level">●●●●○</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Maintenance Hardware</strong></td>
-                        <td>Changement de pièces électroniques, Reconditionnement PC/écrans, Réparation téléphones</td>
-                        <td><span class="level">●●●●○</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Systèmes d'exploitation</strong></td>
-                        <td>Windows 10/11, Installation Windows, Remastérisations, macOS</td>
-                        <td><span class="level">●●●○○</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Virtualisation</strong></td>
-                        <td>Machines Virtuelles (VM), Gestion d'environnements virtualisés</td>
-                        <td><span class="level">●●●○○</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Réseau</strong></td>
-                        <td>Routeurs et switchs CISCO, Configuration réseau</td>
-                        <td><span class="level">●●●○○</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Logiciels & Applications</strong></td>
-                        <td>Munki Admin, Logiciels de maintenance, Outils de reconditionnement</td>
-                        <td><span class="level">●●●○○</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Développement</strong></td>
-                        <td>Java, HTML, PHP, Python, SQL (niveau BTS)</td>
-                        <td><span class="level">●●○○○</span></td>
-                    </tr>
-                    <tr>
-                        <td><strong>Langues</strong></td>
-                        <td>Français (courant), Anglais (B2), Bulgare (langue maternelle)</td>
-                        <td><span class="level">●●●●○</span></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <!-- Barres de compétences animées -->
-            <h3 style="margin-top: 50px; text-align: center; color: #e0e0e0;">📊 Compétences clés détaillées</h3>
+            <p>Mes compétences en infrastructure, systèmes et réseaux acquises en formation et expériences
+                professionnelles.</p>
 
             <div class="skills-container">
+                <!-- Support & Maintenance IT -->
                 <div class="skill-item">
                     <div class="skill-header">
-                        <span class="skill-name">Support & Maintenance IT</span>
+                        <span class="skill-name">💼 Support & Maintenance IT</span>
                         <span class="skill-percent">85%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" data-progress="85"></div>
+                        <div class="skill-progress" style="width:85%"></div>
                     </div>
                     <div class="skill-tools">
-                        🔧 Secure Now • Gestion comptes AD • Remastérisation postes • Support utilisateurs
+                        🔧 <strong>Outils :</strong> Secure Now • Active Directory • Gestion utilisateurs •
+                        Remastérisation postes • Support technique • Diagnostic pannes
                     </div>
                 </div>
 
+                <!-- Maintenance Hardware -->
                 <div class="skill-item">
                     <div class="skill-header">
-                        <span class="skill-name">Maintenance Hardware (reconditionnement)</span>
+                        <span class="skill-name">🔧 Maintenance Hardware & Reconditionnement</span>
                         <span class="skill-percent">85%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" data-progress="85"></div>
+                        <div class="skill-progress" style="width:85%"></div>
                     </div>
                     <div class="skill-tools">
-                        🔩 Réparation PC/écrans • Changement composants • Diagnostic pannes • Tests matériel
+                        🔩 <strong>Expertises :</strong> Réparation PC/écrans • Changement composants •
+                        Reconditionnement matériel • Diagnostic pannes • Tests matériel • Réparation téléphones
                     </div>
                 </div>
 
+                <!-- Systèmes Windows -->
                 <div class="skill-item">
                     <div class="skill-header">
-                        <span class="skill-name">Windows (installation, remastérisation)</span>
+                        <span class="skill-name">💻 Systèmes Windows (Server & Client)</span>
                         <span class="skill-percent">75%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" data-progress="75"></div>
+                        <div class="skill-progress" style="width:75%"></div>
                     </div>
                     <div class="skill-tools">
-                        💻 Windows 10/11 • Windows Server 2022 • Active Directory • GPO • Partages réseau
+                        🪟 <strong>Technologies :</strong> Windows 10/11 • Windows Server 2022 • Active Directory • GPO
+                        • Partages réseau NTFS • Installation & Remastérisation
                     </div>
                 </div>
 
+                <!-- Virtualisation -->
                 <div class="skill-item">
                     <div class="skill-header">
-                        <span class="skill-name">Virtualisation (VM)</span>
+                        <span class="skill-name">☁️ Virtualisation & Infrastructures</span>
                         <span class="skill-percent">70%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" data-progress="70"></div>
+                        <div class="skill-progress" style="width:70%"></div>
                     </div>
                     <div class="skill-tools">
-                        ☁️ VMware Workstation • VirtualBox • Snapshots • Réseaux virtuels • Allocation ressources
+                        🖥️ <strong>Plateformes :</strong> VMware Workstation • VirtualBox • Snapshots • Réseaux
+                        virtuels • Allocation ressources • Gestion environnements VM
                     </div>
                 </div>
 
+                <!-- Réseau & CISCO -->
                 <div class="skill-item">
                     <div class="skill-header">
-                        <span class="skill-name">Réseau (Cisco, configuration)</span>
+                        <span class="skill-name">🌐 Réseau & Configuration CISCO</span>
                         <span class="skill-percent">65%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" data-progress="65"></div>
+                        <div class="skill-progress" style="width:65%"></div>
                     </div>
                     <div class="skill-tools">
-                        🌐 VLAN • Trunk 802.1Q • Routage inter-VLAN • Switchs Cisco • Packet Tracer • TCP/IP
+                        📡 <strong>Compétences :</strong> VLAN • Trunk 802.1Q • Routage inter-VLAN • Switchs Cisco •
+                        Packet Tracer • TCP/IP • Configuration routeurs
                     </div>
                 </div>
 
+                <!-- Systèmes macOS -->
                 <div class="skill-item">
                     <div class="skill-header">
-                        <span class="skill-name">Développement (Python, Java, SQL)</span>
+                        <span class="skill-name">🍎 Systèmes macOS & Déploiement</span>
+                        <span class="skill-percent">60%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width:60%"></div>
+                    </div>
+                    <div class="skill-tools">
+                        💻 <strong>Outils :</strong> Munki Admin • Déploiement applications • Maintenance macOS •
+                        Configuration système • Support utilisateurs Mac
+                    </div>
+                </div>
+
+                <!-- Développement -->
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">💾 Développement & Scripts</span>
                         <span class="skill-percent">50%</span>
                     </div>
                     <div class="skill-bar">
-                        <div class="skill-progress" data-progress="50"></div>
+                        <div class="skill-progress" style="width:50%"></div>
                     </div>
                     <div class="skill-tools">
-                        💾 Python • Java • SQL • HTML/CSS • PHP • Scripts automatisation
+                        👨‍💻 <strong>Langages :</strong> Python • Java • SQL • HTML/CSS • PHP • PowerShell • Scripts
+                        d'automatisation
+                    </div>
+                </div>
+
+                <!-- Langues -->
+                <div class="skill-item">
+                    <div class="skill-header">
+                        <span class="skill-name">🌍 Langues</span>
+                        <span class="skill-percent">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width:80%"></div>
+                    </div>
+                    <div class="skill-tools">
+                        💬 <strong>Maîtrise :</strong> Français (courant) • Anglais (B2 - technique) • Bulgare (langue
+                        maternelle)
                     </div>
                 </div>
             </div>
@@ -272,7 +261,6 @@
                 <p>Mon parcours académique et certifications professionnelles.</p>
 
                 <div class="cards-grid">
-                    <!-- FORMATION 1 : BTS SIO -->
                     <div class="card">
                         <h3>🎓 BTS SIO - Option SISR</h3>
                         <div class="card-meta">📅 2024 - 2026 • ENC Bèssières (Paris)</div>
@@ -296,7 +284,6 @@
                         </div>
                     </div>
 
-                    <!-- CERTIFICATION 3 : PIX -->
                     <div class="card">
                         <h3>🎯 Certification PIX</h3>
                         <div class="card-meta">📅 Janvier 2026 • Certification officielle</div>
@@ -321,7 +308,6 @@
                         </div>
                     </div>
 
-                    <!-- FORMATION 2 : BAC PRO RISC -->
                     <div class="card">
                         <h3>🎓 Bac Professionnel RISC</h3>
                         <div class="card-meta">📅 2024 • Lycée André-Marie-Ampère</div>
@@ -345,7 +331,6 @@
                         </div>
                     </div>
 
-                    <!-- CERTIFICATION 1 : SST -->
                     <div class="card">
                         <h3>🚑 Sauveteur Secouriste du Travail (SST)</h3>
                         <div class="card-meta">📅 2023 • Formation certifiante</div>
@@ -368,7 +353,6 @@
                         </div>
                     </div>
 
-                    <!-- FORMATION 3 : PERMIS B -->
                     <div class="card">
                         <h3>🚗 Permis de conduire B</h3>
                         <div class="card-meta">📅 Obtenu (2024) • Véhicule léger</div>
@@ -376,13 +360,12 @@
                 </div>
             </section>
 
-            <!-- SECTION EXPÉRIENCES avec TIMELINE -->
+            <!-- SECTION EXPÉRIENCES -->
             <section id="experiences">
                 <h2>💼 Expériences professionnelles</h2>
                 <p>Mon parcours professionnel et stages.</p>
 
                 <div class="timeline">
-                    <!-- EXPÉRIENCE 1 : Groupe Transdev -->
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2025</div>
@@ -405,7 +388,6 @@
                         </div>
                     </div>
 
-                    <!-- EXPÉRIENCE 2 : MyDeal -->
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2023</div>
@@ -427,7 +409,6 @@
                         </div>
                     </div>
 
-                    <!-- EXPÉRIENCE 3 : Inet System -->
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2022</div>
@@ -449,7 +430,6 @@
                         </div>
                     </div>
 
-                    <!-- EXPÉRIENCE 4 : Touchstone Communication -->
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2022</div>
@@ -471,7 +451,6 @@
                         </div>
                     </div>
 
-                    <!-- EXPÉRIENCE 5 : Atelier Sans Frontière -->
                     <div class="timeline-item">
                         <div class="timeline-dot"></div>
                         <div class="timeline-date">2021</div>
@@ -495,17 +474,16 @@
                 </div>
             </section>
 
-            <!-- SECTION PROJETS E4 -->
+            <!-- SECTION PROJETS -->
             <section id="projets">
                 <h2>📂 Projets techniques</h2>
                 <p>Mes réalisations professionnelles et académiques pour l'épreuve E4.</p>
 
-                <!-- PROJET 1 : ACTIVE DIRECTORY -->
-                <div class="card" style="margin-bottom: 30px;">
+                <div class="card" style="margin-bottom:30px">
                     <h3>🖥️ Mise en place d'une infrastructure Active Directory</h3>
                     <div class="card-meta">🏢 TP - ENC Bèssières</div>
 
-                    <p style="margin-top: 15px;"><strong>📌 Contexte et objectifs :</strong></p>
+                    <p style="margin-top:15px"><strong>📌 Contexte et objectifs :</strong></p>
                     <p>
                         Déploiement d'un serveur Active Directory sous Windows Server 2022 dans un environnement
                         virtualisé en salle de TP. L'objectif était de créer et gérer un domaine d'entreprise avec
@@ -513,7 +491,7 @@
                         fictive.
                     </p>
 
-                    <p style="margin-top: 15px;"><strong>🔧 Réalisations techniques :</strong></p>
+                    <p style="margin-top:15px"><strong>🔧 Réalisations techniques :</strong></p>
                     <p>
                         • Installation et configuration de Windows Server 2022 sur machine virtuelle<br>
                         • Promotion du serveur en contrôleur de domaine et création du domaine<br>
@@ -526,7 +504,7 @@
                         • Intégration de postes clients Windows 10 au domaine et tests d'authentification
                     </p>
 
-                    <p style="margin-top: 15px;"><strong>💡 Difficultés et solutions :</strong></p>
+                    <p style="margin-top:15px"><strong>💡 Difficultés et solutions :</strong></p>
                     <p>
                         Problème rencontré lors de la jonction des postes clients au domaine : les machines ne
                         trouvaient pas le contrôleur de domaine. Après analyse, le problème venait d'une mauvaise
@@ -535,7 +513,7 @@
                         le DNS du contrôleur de domaine. Les machines ont ensuite rejoint le domaine sans problème.
                     </p>
 
-                    <p style="margin-top: 15px;"><strong>📊 Résultats :</strong></p>
+                    <p style="margin-top:15px"><strong>📊 Résultats :</strong></p>
                     <p>
                         Infrastructure Active Directory pleinement opérationnelle avec 25 comptes utilisateurs actifs,
                         4 GPO appliquées et fonctionnelles, 6 partages réseau configurés avec droits différenciés.
@@ -543,7 +521,7 @@
                         s'authentifier et accéder à leurs ressources selon leurs droits.
                     </p>
 
-                    <p style="margin-top: 15px;"><strong>🛠️ Technologies utilisées :</strong></p>
+                    <p style="margin-top:15px"><strong>🛠️ Technologies utilisées :</strong></p>
                     <div class="tags">
                         <span class="tag">Windows Server 2022</span>
                         <span class="tag">Active Directory</span>
@@ -554,12 +532,11 @@
                     </div>
                 </div>
 
-                <!-- PROJET 2 : RÉSEAU VLAN -->
-                <div class="card" style="margin-bottom: 30px;">
+                <div class="card" style="margin-bottom:30px">
                     <h3>🌐 Configuration d'une architecture réseau avec segmentation VLAN</h3>
                     <div class="card-meta">🏢 TP - ENC Bèssières</div>
 
-                    <p style="margin-top: 15px;"><strong>📌 Contexte et objectifs :</strong></p>
+                    <p style="margin-top:15px"><strong>📌 Contexte et objectifs :</strong></p>
                     <p>
                         Conception et déploiement d'une infrastructure réseau segmentée avec VLANs pour isoler
                         les différents services d'une entreprise fictive. L'objectif était de séparer le trafic
@@ -567,7 +544,7 @@
                         tout en permettant la communication inter-VLAN via un routeur.
                     </p>
 
-                    <p style="margin-top: 15px;"><strong>🔧 Réalisations techniques :</strong></p>
+                    <p style="margin-top:15px"><strong>🔧 Réalisations techniques :</strong></p>
                     <p>
                         • Création du schéma réseau avec 3 VLANs distincts sur Packet Tracer<br>
                         • Configuration de 2 switchs CISCO avec création de 3 VLANs (VLAN 10 - Administration,
@@ -581,7 +558,7 @@
                         • Tests de connectivité intra-VLAN et inter-VLAN avec commande ping
                     </p>
 
-                    <p style="margin-top: 15px;"><strong>💡 Difficultés et solutions :</strong></p>
+                    <p style="margin-top:15px"><strong>💡 Difficultés et solutions :</strong></p>
                     <p>
                         Problème majeur : les machines de VLANs différents ne pouvaient pas communiquer entre elles
                         malgré la configuration du routeur. Après vérification, le port de liaison entre le switch
@@ -590,7 +567,7 @@
                         Le routage inter-VLAN a ensuite fonctionné correctement.
                     </p>
 
-                    <p style="margin-top: 15px;"><strong>📊 Résultats :</strong></p>
+                    <p style="margin-top:15px"><strong>📊 Résultats :</strong></p>
                     <p>
                         Architecture réseau opérationnelle avec 3 VLANs isolés, chacun sur son propre sous-réseau.
                         Les machines d'un même VLAN communiquent sans problème, et le routage inter-VLAN permet
@@ -598,7 +575,7 @@
                         Les tests de connectivité confirment le bon fonctionnement de l'infrastructure.
                     </p>
 
-                    <p style="margin-top: 15px;"><strong>🛠️ Technologies utilisées :</strong></p>
+                    <p style="margin-top:15px"><strong>🛠️ Technologies utilisées :</strong></p>
                     <div class="tags">
                         <span class="tag">CISCO</span>
                         <span class="tag">VLAN</span>
@@ -609,12 +586,11 @@
                     </div>
                 </div>
 
-                <!-- PROJET 3 : VIRTUALISATION -->
-                <div class="card" style="margin-bottom: 30px;">
+                <div class="card" style="margin-bottom:30px">
                     <h3>☁️ Déploiement d'une infrastructure virtualisée</h3>
                     <div class="card-meta">🏢 TP - ENC Bèssières</div>
 
-                    <p style="margin-top: 15px;"><strong>📌 Contexte et objectifs :</strong></p>
+                    <p style="margin-top:15px"><strong>📌 Contexte et objectifs :</strong></p>
                     <p>
                         Mise en place d'une infrastructure de virtualisation complète sur les postes de TP de l'école.
                         L'objectif était de déployer plusieurs machines virtuelles pour simuler un environnement
@@ -622,7 +598,7 @@
                         l'utilisation des ressources matérielles.
                     </p>
 
-                    <p style="margin-top: 15px;"><strong>🔧 Réalisations techniques :</strong></p>
+                    <p style="margin-top:15px"><strong>🔧 Réalisations techniques :</strong></p>
                     <p>
                         • Installation et configuration de VMware Workstation sur le poste de TP<br>
                         • Création de 4 machines virtuelles : 1 serveur Windows Server 2022, 1 serveur Debian 12,
@@ -635,7 +611,7 @@
                         • Tests de communication entre les VMs et configuration d'un petit réseau d'entreprise virtuel
                     </p>
 
-                    <p style="margin-top: 15px;"><strong>💡 Difficultés et solutions :</strong></p>
+                    <p style="margin-top:15px"><strong>💡 Difficultés et solutions :</strong></p>
                     <p>
                         Problème de performances rencontré : les machines virtuelles étaient très lentes, surtout
                         lors de l'exécution simultanée de plusieurs VMs. Après analyse, le poste de TP manquait de
@@ -645,7 +621,7 @@
                         Les performances se sont nettement améliorées.
                     </p>
 
-                    <p style="margin-top: 15px;"><strong>📊 Résultats :</strong></p>
+                    <p style="margin-top:15px"><strong>📊 Résultats :</strong></p>
                     <p>
                         Infrastructure virtualisée fonctionnelle avec 4 VMs opérationnelles communiquant entre elles.
                         Le serveur Windows Server héberge Active Directory, le serveur Debian fait office de serveur
@@ -654,7 +630,7 @@
                         en arrière en cas d'erreur de configuration.
                     </p>
 
-                    <p style="margin-top: 15px;"><strong>🛠️ Technologies utilisées :</strong></p>
+                    <p style="margin-top:15px"><strong>🛠️ Technologies utilisées :</strong></p>
                     <div class="tags">
                         <span class="tag">VMware Workstation</span>
                         <span class="tag">Windows Server 2022</span>
@@ -674,11 +650,12 @@
                 <div class="contact-card">
                     <ul class="contact-list">
                         <li><strong>📧 Email :</strong> <a href="mailto:ivohawaw@gmail.com">ivohawaw@gmail.com</a></li>
-                        <li><strong>💼 LinkedIn :</strong> <a href="#" target="_blank">ivaylo.dobrev</a></li>
+                        <li><strong>💼 LinkedIn :</strong> <a href="#" target="_blank" rel="noopener">ivaylo.dobrev</a>
+                        </li>
                         <li><strong>📱 Téléphone :</strong> 06 66 75 00 60</li>
                         <li><strong>📍 Localisation :</strong> Massy (91300), Île-de-France</li>
                     </ul>
-                    <div style="margin-top: 20px;">
+                    <div style="margin-top:20px">
                         <a href="CV/Ivaylo Dobrev CV.pdf" class="btn btn-primary" target="_blank">📄 Voir mon CV</a>
                     </div>
                 </div>
@@ -691,141 +668,144 @@
     </footer>
 
     <script>
-        // Animation des barres de compétences
-        function animateSkills() {
-            const skillBars = document.querySelectorAll('.skill-progress');
+        (function () {
+            'use strict';
 
-            skillBars.forEach(bar => {
-                const progress = bar.getAttribute('data-progress');
-                const barTop = bar.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
+            let isScrolling = false;
 
-                if (barTop < windowHeight - 100 && (bar.style.width === '0px' || bar.style.width === '')) {
-                    bar.style.width = progress + '%';
+            // OPTIMISÉ : UN SEUL événement scroll avec requestAnimationFrame
+            window.addEventListener('scroll', function () {
+                if (!isScrolling) {
+                    window.requestAnimationFrame(function () {
+                        handleScroll();
+                        isScrolling = false;
+                    });
+                    isScrolling = true;
                 }
             });
-        }
 
-        window.addEventListener('scroll', animateSkills);
-        window.addEventListener('load', animateSkills);
-
-        // Effet typing
-        document.addEventListener('DOMContentLoaded', function () {
-            const typingText = document.getElementById('typingText');
-            if (typingText) {
-                const text = "Étudiant en Solutions d'Infrastructure, Systèmes et Réseaux.";
-                let index = 0;
-
-                function typeWriter() {
-                    if (index < text.length) {
-                        typingText.textContent += text.charAt(index);
-                        index++;
-                        setTimeout(typeWriter, 60);
-                    } else {
-                        setTimeout(function () {
-                            typingText.style.borderRight = 'none';
-                        }, 500);
-                    }
-                }
-
-                setTimeout(typeWriter, 800);
-            }
-
-            const hamburger = document.getElementById('hamburger');
-            const navMenu = document.getElementById('nav-menu');
-            const header = document.querySelector('header');
-            let lastScroll = 0;
-
-            // Détection si c'est un appareil mobile
-            const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
-
-            // Menu hamburger
-            if (hamburger && navMenu) {
-                hamburger.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    hamburger.classList.toggle('active');
-                    navMenu.classList.toggle('active');
-                });
-
-                const navLinks = navMenu.querySelectorAll('a');
-                navLinks.forEach(function (link) {
-                    link.addEventListener('click', function () {
-                        hamburger.classList.remove('active');
-                        navMenu.classList.remove('active');
-                    });
-                });
-            }
-
-            if (isMobile) {
-                // MOBILE : Scroll up/down pour montrer/cacher
-                window.addEventListener('scroll', function () {
-                    const currentScroll = window.pageYOffset;
-
-                    if (currentScroll <= 10) {
-                        header.style.transform = 'translateY(0)';
-                    } else if (currentScroll > lastScroll && currentScroll > 50) {
-                        header.style.transform = 'translateY(-100%)';
-                    } else if (currentScroll < lastScroll) {
-                        header.style.transform = 'translateY(0)';
-                    }
-
-                    lastScroll = currentScroll;
-                });
-            } else {
-                // PC : Cache après scroll, réapparaît UNIQUEMENT avec la souris
-                window.addEventListener('scroll', function () {
-                    const currentScroll = window.pageYOffset;
-
-                    if (currentScroll > 50) {
-                        header.style.transform = 'translateY(-100%)';
-                    } else {
-                        header.style.transform = 'translateY(0)';
-                    }
-                });
-
-                // Souris en haut = header visible
-                document.addEventListener('mousemove', function (e) {
-                    const currentScroll = window.pageYOffset;
-
-                    if (e.clientY < 100 && currentScroll > 50) {
-                        header.style.transform = 'translateY(0)';
-                    } else if (e.clientY > 150 && currentScroll > 50) {
-                        header.style.transform = 'translateY(-100%)';
-                    }
-                });
-            }
-        });
-
-        // Barre de progression
-        window.addEventListener('scroll', function () {
-            const progressBar = document.getElementById('progressBar');
-            if (progressBar) {
+            function handleScroll() {
+                const scrollPos = window.pageYOffset;
                 const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = (winScroll / height) * 100;
-                progressBar.style.width = scrolled + '%';
+
+                // Barre de progression
+                const progressBar = document.getElementById('progressBar');
+                if (progressBar) {
+                    const scrolled = (winScroll / height) * 100;
+                    progressBar.style.width = scrolled + '%';
+                }
+
+                // Bouton retour en haut
+                const backToTop = document.getElementById('backToTop');
+                if (backToTop) {
+                    if (scrollPos > 600) {
+                        backToTop.classList.add('show');
+                    } else {
+                        backToTop.classList.remove('show');
+                    }
+                }
+
+                // Header (seulement sur PC)
+                const header = document.querySelector('header');
+                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+
+                if (!isMobile && header) {
+                    if (scrollPos > 50) {
+                        header.style.transform = 'translateY(-100%)';
+                    } else {
+                        header.style.transform = 'translateY(0)';
+                    }
+                }
             }
-        });
 
-        // Bouton retour en haut
-        const backToTop = document.getElementById('backToTop');
+            // Initialisation
+            document.addEventListener('DOMContentLoaded', function () {
+                // Effet typing
+                const typingText = document.getElementById('typingText');
+                if (typingText) {
+                    const text = "Étudiant en Solutions d'Infrastructure, Systèmes et Réseaux.";
+                    let index = 0;
 
-        if (backToTop) {
-            window.addEventListener('scroll', function () {
-                if (window.pageYOffset > 600) {
-                    backToTop.classList.add('show');
-                } else {
-                    backToTop.classList.remove('show');
+                    function typeWriter() {
+                        if (index < text.length) {
+                            typingText.textContent += text.charAt(index);
+                            index++;
+                            setTimeout(typeWriter, 60);
+                        } else {
+                            setTimeout(function () {
+                                typingText.style.borderRight = 'none';
+                            }, 500);
+                        }
+                    }
+
+                    setTimeout(typeWriter, 800);
+                }
+
+                const hamburger = document.getElementById('hamburger');
+                const navMenu = document.getElementById('nav-menu');
+                const header = document.querySelector('header');
+                let lastScroll = 0;
+
+                const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+
+                // Menu hamburger
+                if (hamburger && navMenu) {
+                    hamburger.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        hamburger.classList.toggle('active');
+                        navMenu.classList.toggle('active');
+                    });
+
+                    const navLinks = navMenu.querySelectorAll('a');
+                    navLinks.forEach(function (link) {
+                        link.addEventListener('click', function () {
+                            hamburger.classList.remove('active');
+                            navMenu.classList.remove('active');
+                        });
+                    });
+                }
+
+                // Header mobile
+                if (isMobile && header) {
+                    window.addEventListener('scroll', function () {
+                        const currentScroll = window.pageYOffset;
+
+                        if (currentScroll <= 10) {
+                            header.style.transform = 'translateY(0)';
+                        } else if (currentScroll > lastScroll && currentScroll > 50) {
+                            header.style.transform = 'translateY(-100%)';
+                        } else if (currentScroll < lastScroll) {
+                            header.style.transform = 'translateY(0)';
+                        }
+
+                        lastScroll = currentScroll;
+                    });
+                } else if (header) {
+                    // Header PC avec souris
+                    document.addEventListener('mousemove', function (e) {
+                        const currentScroll = window.pageYOffset;
+
+                        if (e.clientY < 100 && currentScroll > 50) {
+                            header.style.transform = 'translateY(0)';
+                        } else if (e.clientY > 150 && currentScroll > 50) {
+                            header.style.transform = 'translateY(-100%)';
+                        }
+                    });
+                }
+
+                // Bouton retour en haut - click
+                const backToTop = document.getElementById('backToTop');
+                if (backToTop) {
+                    backToTop.addEventListener('click', function () {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    });
                 }
             });
-
-            backToTop.addEventListener('click', function () {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-        }
+        })();
     </script>
 
 </body>
