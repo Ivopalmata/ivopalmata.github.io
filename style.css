@@ -294,7 +294,7 @@ p {
 }
 
 /* Cartes animées au hover - OPTIMISÉ */
-#projets .card,
+#veille .card,
 #experiences .timeline-content,
 #formations .card,
 #apropos .card {
@@ -303,7 +303,7 @@ p {
     transition: all 0.3s ease;
 }
 
-#projets .card::before,
+#veille .card::before,
 #experiences .timeline-content::before,
 #formations .card::before,
 #apropos .card::before {
@@ -317,14 +317,14 @@ p {
     transition: left 0.4s ease;
 }
 
-#projets .card:hover::before,
+#veille .card:hover::before,
 #experiences .timeline-content:hover::before,
 #formations .card:hover::before,
 #apropos .card:hover::before {
     left: 100%;
 }
 
-#projets .card:hover,
+#veille .card:hover,
 #experiences .timeline-content:hover,
 #formations .card:hover,
 #apropos .card:hover {
@@ -333,38 +333,38 @@ p {
     box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
 }
 
-#projets .card h3,
+#veille .card h3,
 #experiences .timeline-content h3,
 #formations .card h3,
 #apropos .card h3 {
     transition: color 0.3s ease;
 }
 
-#projets .card:hover h3,
+#veille .card:hover h3,
 #experiences .timeline-content:hover h3,
 #formations .card:hover h3,
 #apropos .card:hover h3 {
     color: #3b82f6;
 }
 
-#projets .card .tags,
+#veille .card .tags,
 #experiences .timeline-content .tags,
 #formations .card .tags {
     transition: transform 0.3s ease;
 }
 
-#projets .card:hover .tags,
+#veille .card:hover .tags,
 #experiences .timeline-content:hover .tags,
 #formations .card:hover .tags {
     transform: translateX(3px);
 }
 
-#projets .card img,
+#veille .card img,
 #formations .card img {
     transition: transform 0.4s ease;
 }
 
-#projets .card:hover img,
+#veille .card:hover img,
 #formations .card:hover img {
     transform: scale(1.05);
 }
